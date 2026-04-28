@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Elemento raíz -->
+    <xs:element name="torneoAPT">
+        <xs:complexType>
+            <xs:sequence>
+			
+			<xs:element name="torneo">
+				<xs:complextype>
+					<xs:sequence>
+					
+						<xs:element name="nombre" type="texto"/>
+						<xs:element name="fechaIni" type="fecha"/>
+						
+					
+				<xs:element name="puntosAPT">
+					<xs:simpleType>
+						<xs:minInclusive value="o"/>
+						<xs:maxInclusive value="10"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="cuadro">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="17"/>
+                        </xs:restriction>
+					
+				</xs:element>
+				
+				
